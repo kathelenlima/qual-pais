@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu país</title>
+    <style>
+        body {
+            background-color: rgb(133, 150, 206);
+            font: normal 16pt Georgia;
+            color: rgb(236, 238, 237);
+        }
+        h1 {
+            font: normal 45pt perpetua;
+            color: rgb(224, 201, 159);
+        }
+        #res {
+            font: normal 14pt Georgia;
+            margin-top: 20px;
+            color: rgb(226, 205, 192);
+        }
+        #btn {
+            height: 20px;
+            width: 80px;
+            font: 10pt Georgia;
+            background-color: rgb(226, 206, 170);
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual seu país?</h1>
+    Informe seu país: <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" id="btn" onclick="verificar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verificar() {
+            var nomep = window.document.querySelector('input#pais').value
+            var res = document.getElementById('res')
+            res.innerHTML = (`Vivendo em ${nomep}.`)
+            if (nomep == 'Brasil') {
+                res.innerHTML += `<p>Você é brasileiro!</p>`
+            } else {
+                res.innerHTML += `<p>Você é estrangeiro!</p>`
+            }
+
+        }
+    </script>
+    
+    
+</body>
+</html>
